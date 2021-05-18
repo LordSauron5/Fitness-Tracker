@@ -1,0 +1,39 @@
+<div fxLayoutAlign="center center">
+    <mat-form-field fxFlex ="40%">
+        <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+</div>
+<mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef >Date</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.date.toDate() | date }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef >Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="calories">
+        <mat-header-cell *matHeaderCellDef>Calories</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.calories | number }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="duration">
+        <mat-header-cell *matHeaderCellDef >Duration</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.duration | number }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="state">
+        <mat-header-cell *matHeaderCellDef >State</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.state }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
