@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/fitness-tracker",
     "ignore": [
       "firebase.json",
       "**/.*",
