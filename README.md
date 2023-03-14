@@ -14,7 +14,7 @@ To view a live example, [click here.](https://ng-fitness-tracker-28acd.web.app/ 
 ------------
 
 |   HTML | CSS | JavaScript  | Angular | Firebase | RxJS & NgRx |
-| :------------: | :------------: | :------------: | :------------: | :------------: |
+| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
 |  custom | custom  | TypeScript  | nosql |
 
 
